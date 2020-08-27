@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "GOAL_TEMP")
 public class GoalTemperature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +21,9 @@ public class GoalTemperature {
     }
 
     public GoalTemperature(LocalDate t_Date, float TValue, LocalTime t_Time) {
-        T_Date = t_Date;
+        this.T_Date = t_Date;
         this.TValue = TValue;
-        T_Time = t_Time;
+        this.T_Time = t_Time;
     }
 
     public int getId() {
@@ -40,7 +39,7 @@ public class GoalTemperature {
     }
 
     public void setT_Date(LocalDate t_Date) {
-        T_Date = t_Date;
+        this.T_Date = t_Date;
     }
 
     public float getTValue() {
@@ -56,6 +55,6 @@ public class GoalTemperature {
     }
 
     public void setT_Time(LocalTime t_Time) {
-        T_Time = t_Time;
+        this.T_Time = t_Time;
     }
 }
